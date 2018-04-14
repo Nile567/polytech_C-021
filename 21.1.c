@@ -1,10 +1,12 @@
-void push(node_t* head, int data) {
-node_t* newNode = (*node_t)malloc(sizeof(mode_t));
-newNode->data = data;
-newNode->next = head;
-head = newNode;
+#include <stdio.h>
+#include <stdlib.h>
+
+void push(struct node* head, int data) {
+	struct node* newNode = (struct node*)malloc(sizeof(struct node));
+	newNode->data = data;
+	newNode->next = head;
+	head = newNode;
 }
 void push_test() {
-list_t* head = build();
-push(head, 1);
-}
+	List head = build();
+	push(head, 1);
